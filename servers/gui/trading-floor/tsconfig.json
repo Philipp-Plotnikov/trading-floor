@@ -2,7 +2,7 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "baseUrl": "./",
+    "baseUrl": "./src",
     "outDir": "./dist/out-tsc",
     "sourceMap": true,
     "declaration": false,
@@ -15,9 +15,18 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@shared/*": ["app/shared/*"],
+      "@pages/*": ["app/pages/*"],
+      "@store/*": ["app/store/*"],
+      "@angular/*": ["../node_modules/@angular/*"],
+      "@entities/*": ["app/entities/*"],
+      "@api/*": ["app/api/*"]
+    }
   },
   "angularCompilerOptions": {
-    "enableI18nLegacyMessageIdFormat": false
+    "fullTemplateTypeCheck": true,
+    "strictInjectionParameters": true
   }
 }
