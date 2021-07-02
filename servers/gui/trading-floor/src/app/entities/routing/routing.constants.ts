@@ -7,5 +7,5 @@ export const REDIRECT_ROUTES: Routes = [
   {
     path: '**',
     redirectTo: HOME_ROUTE,
-  }
+  },
 ];
