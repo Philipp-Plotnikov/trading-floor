@@ -1,8 +1,8 @@
 import {ChangeDetectionStrategy, Component} from '@angular/core';
 
 @Component({
-	selector: 'main',
-	template: ' <main-component></main-component> ',
+	selector: 'footer',
+	template: ' <footer-component></footer-component> ',
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class MainContainer {}
+export class FooterContainer {}

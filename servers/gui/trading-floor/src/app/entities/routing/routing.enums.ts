@@ -1,5 +1,5 @@
 export namespace ERouting {
-  export enum Pages {
-    Main = '/main'
-  }
+	export enum Pages {
+		Main = '/main',
+	}
 }
