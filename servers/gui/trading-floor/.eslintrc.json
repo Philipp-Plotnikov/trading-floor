@@ -81,13 +81,6 @@
             "default": "array"
           }
         ],
-        "@typescript-eslint/consistent-type-assertions": [
-          "error",
-          {
-            "assertionStyle": "as",
-            "objectLiteralTypeAssertions": "allow-as-parameter"
-          }
-        ],
         "@typescript-eslint/dot-notation": "error",
         "@typescript-eslint/indent": "off",
         "@typescript-eslint/no-unsafe-assignment": "off",
