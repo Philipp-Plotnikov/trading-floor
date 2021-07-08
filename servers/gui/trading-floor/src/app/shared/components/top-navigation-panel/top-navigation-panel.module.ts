@@ -3,10 +3,11 @@ import {CommonModule} from '@angular/common';
 import {TopNavigationPanelComponent} from './top-navigation-panel.component';
 import {TopNavigationPanelContainer} from '@shared/components/top-navigation-panel/top-navigation-panel.container';
 import {GlobalSearchInputModule} from '@shared/components/global-search-input/global-search-input.module';
+import {MatIconModule} from '@angular/material/icon';
 
 @NgModule({
 	declarations: [TopNavigationPanelComponent, TopNavigationPanelContainer],
-	imports: [CommonModule, GlobalSearchInputModule],
+	imports: [CommonModule, GlobalSearchInputModule, MatIconModule],
 	exports: [TopNavigationPanelContainer],
 })
 export class TopNavigationPanelModule {}

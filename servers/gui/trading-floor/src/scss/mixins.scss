@@ -1,0 +1,19 @@
+@mixin var-colors($base-color) {
+  @each $name, $color in $base-color {
+    --#{"" + $name}: #{$color};
+  }
+}
+
+@mixin var-range($variable, $value) {
+  // Default
+  #{$variable}: $value;
+  #{$variable}-m: calc(var(#{$variable}) * 1.5);
+
+  // Smaller values
+  #{$variable}-s: calc(var(#{$variable}) / 2);
+  #{$variable}-xs: calc(var(#{$variable}) / 4);
+
+  // Bigger values
+  #{$variable}-l: calc(var(#{$variable}) * 2);
+  #{$variable}-xl: calc(var(#{$variable}) * 4);
+}
