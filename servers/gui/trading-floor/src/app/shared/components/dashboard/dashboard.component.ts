@@ -1,4 +1,6 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
+import {IDashboard} from '@entities/shared/components/dashboard/dashboard.interfaces';
+import {LoadingStatus} from '@entities/common/common.interfaces';
 
 @Component({
 	selector: 'dashboard-component',
@@ -6,4 +8,7 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
 	styleUrls: ['./dashboard.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DashboardComponent {}
+export class DashboardComponent {
+	@Input() readonly categoryData: IDashboard.CategoryData[];
+	@Input() readonly categoryDataLoadingStatus: LoadingStatus;
+}

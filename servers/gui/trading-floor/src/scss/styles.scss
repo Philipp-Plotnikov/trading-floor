@@ -1,4 +1,5 @@
 @import "vars/colors";
+@import "vars/fonts";
 @import "mixins";
 
 * {
@@ -12,5 +13,6 @@
 html {
   @include var-colors($base-color);
   @include var-range(--offset, 1rem);
+  @include var-weights($font-weights);
   width: 100%;
 }

@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 
 @Component({
 	selector: 'dashboard-item-component',
@@ -6,4 +6,7 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
 	styleUrls: ['./dashboard-item.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class DashboardItemComponent {}
+export class DashboardItemComponent {
+	@Input() readonly title: string;
+	@Input() readonly imgUrl: string;
+}

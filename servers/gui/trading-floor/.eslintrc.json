@@ -38,6 +38,7 @@
           "error",
           {
             "ignorePattern": "^import [^,]+ from |^export | implements ",
+            "ignoreUrls": true,
             "code": 120
           }
         ],

@@ -1,7 +1,11 @@
 @mixin var-colors($base-color) {
   @each $name, $color in $base-color {
-    --#{"" + $name}: #{$color};
+    --#{$name}: #{$color};
   }
+}
+
+@mixin var-weights($base-weights) {
+  @include var-colors($base-weights);
 }
 
 @mixin var-range($variable, $value) {

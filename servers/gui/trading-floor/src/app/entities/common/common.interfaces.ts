@@ -14,3 +14,5 @@ export interface Statuses {
 export interface CustomError {
 	errorMessage: string;
 }
+
+export type PureObject = Record<string, any>;

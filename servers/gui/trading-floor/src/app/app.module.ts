@@ -8,6 +8,7 @@ import {TopNavigationPanelModule} from '@shared/components/top-navigation-panel/
 import {FooterModule} from '@shared/components/footer/footer.module';
 import {RootReducerModule} from '@store/root-reducer.module';
 import {RootEffectsModule} from '@store/root-effects.module';
+import {ApiService} from '@api/common.api.service';
 
 @NgModule({
 	declarations: [AppComponent],
@@ -20,6 +21,7 @@ import {RootEffectsModule} from '@store/root-effects.module';
 		RootReducerModule,
 		RootEffectsModule,
 	],
+	providers: [ApiService],
 	bootstrap: [AppComponent],
 })
 export class AppModule {}

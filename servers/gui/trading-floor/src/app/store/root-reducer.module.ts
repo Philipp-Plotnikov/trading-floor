@@ -1,15 +1,7 @@
 import {NgModule} from '@angular/core';
 import {StoreModule} from '@ngrx/store';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
-import {DashboardState, reducer} from '@store/dashboard/reducer';
-
-export enum StoreModules {
-	Dashboard = 'dashboard',
-}
-
-export interface AppState {
-	dashboard: DashboardState;
-}
+import {reducer} from '@store/dashboard/reducer';
 
 const APP_REDUCERS = {
 	dashboard: reducer,
