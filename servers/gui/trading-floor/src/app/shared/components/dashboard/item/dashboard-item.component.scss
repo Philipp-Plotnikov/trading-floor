@@ -1,4 +1,4 @@
-@import "../dashboard/dashboard.component";
+@import "../dashboard.component";
 
 $percent: 0.9;
 $content-width: calc(#{$column-width} * #{$percent});
@@ -26,6 +26,7 @@ $img-height: calc(#{$content-width} * #{$aspect});
 
       .title {
         font-size: 1.5rem;
+        font-weight: var(--bold);
         color: var(--black);
       }
 
@@ -35,6 +36,17 @@ $img-height: calc(#{$content-width} * #{$aspect});
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
+      }
+
+      .button {
+        background-color: var(--black);
+        font-weight: var(--bold);
+        padding: var(--offset) var(--offset-xl);
+        font-size: 1rem;
+        text-transform: uppercase;
+        display: block;
+        margin: auto;
+        margin-top: var(--offset-xl);
       }
     }
   }

@@ -1,6 +1,7 @@
 @import "vars/colors";
 @import "vars/fonts";
 @import "mixins";
+@import "others";
 
 * {
   border: none;
@@ -15,4 +16,5 @@ html {
   @include var-range(--offset, 1rem);
   @include var-weights($font-weights);
   width: 100%;
+  font-size: 16px;
 }
