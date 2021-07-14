@@ -4,6 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start-server": "node ../../api/server.js",
+    "start-demon": "forever start ../../api/server.js",
     "start-gui": "ng serve --open",
     "build": "ng build",
     "test": "ng test",
