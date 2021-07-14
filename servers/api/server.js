@@ -10,5 +10,5 @@ app.get('/', (req, res) => {
 app.use(express.static(path.join(__dirname, '../gui/trading-floor/dist/trading-floor')));
 
 app.listen(port, () => {
-    console.log(`Server is listening at http://localhost:${port}`)
+    console.log(`Server is listening at port: ${port}`)
 });
