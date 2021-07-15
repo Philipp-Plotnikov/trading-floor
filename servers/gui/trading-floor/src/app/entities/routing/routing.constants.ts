@@ -1,4 +1,4 @@
-import {Route, Routes} from '@angular/router';
+import {Routes} from '@angular/router';
 import {ERouting} from '@entities/routing/routing.enums';
 
 export const HOME_ROUTE = ERouting.Pages.Main;
