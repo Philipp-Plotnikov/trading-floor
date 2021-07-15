@@ -64,6 +64,24 @@ $border-width: 0.1rem;
 
     .right-nav {
       width: 20%;
+
+      .cart-container {
+        display: flex;
+        align-items: flex-end;
+        font-weight: var(--medium);
+        border: $border-width solid transparent;
+        font-size: calc(#{$text-content-font-size} + #{$delta});
+        padding: var(--offset-xs) var(--offset-s);
+
+        .cart-icon {
+          @include icon-size(2rem);
+          margin-right: var(--offset-xs);
+        }
+      }
+
+      .cart-container:hover {
+        border: $border-width solid var(--white);
+      }
     }
   }
 }
