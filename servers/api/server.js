@@ -8,4 +8,6 @@ app.get('/trading-floor/develop/', (req, res) => {
 
 app.use(express.static(path.join(__dirname, '../gui/trading-floor/dist/trading-floor')));
 
-exports.app = app;
+app.listen(port, () => {
+    console.log(`Server is listening at port: ${port}`);
+});
