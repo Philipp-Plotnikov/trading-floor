@@ -1,0 +1,35 @@
+@import "~scss/mixins";
+
+:host {
+  display: block;
+  width: 100%;
+  height: 100%;
+
+  .global-search {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    .search-input-container {
+      width: 82%;
+      background-color: var(--white);
+    }
+
+    .search-button {
+      background-color: var(--orange);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 0.2rem;
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+      padding: var(--offset-s) 0.8rem;
+
+      .search-icon {
+        @include icon-size(1.9rem);
+        color: var(--top-navigation-bg);
+      }
+    }
+  }
+}

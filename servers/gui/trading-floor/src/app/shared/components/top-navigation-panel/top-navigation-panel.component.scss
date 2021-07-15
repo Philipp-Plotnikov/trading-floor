@@ -1,22 +1,69 @@
+@import "~scss/mixins";
+
+$text-content-font-size: 0.8rem;
+$delta: 0.2rem;
+$border-width: 0.1rem;
+
 :host {
   display: block;
 
   .nav {
     background-color: var(--top-navigation-bg);
     display: flex;
-    width: 100%;
     padding: var(--offset);
 
     > * {
       display: flex;
+      align-items: center;
     }
 
     .left-nav {
       width: 20%;
+
+      .deliver-button {
+        display: flex;
+        align-items: flex-end;
+        border: $border-width solid transparent;
+        padding: var(--offset-xs) var(--offset-s);
+
+        .location-icon {
+          @include icon-size(1.5rem);
+          color: var(--white);
+        }
+
+        .text-content {
+          display: flex;
+          flex-direction: column;
+          color: var(--gray);
+          margin-left: var(--offset-xs);
+          font-size: $text-content-font-size;
+
+          .country {
+            color: var(--white);
+            font-weight: var(--medium);
+            font-size: calc(#{$text-content-font-size} + #{$delta});
+          }
+        }
+      }
+
+      .deliver-button:hover {
+        border: $border-width solid var(--white);
+      }
     }
 
     .center-nav {
       width: 60%;
+
+      .global-search-input {
+        display: block;
+        width: 100%;
+        height: 100%;
+        margin: 0 var(--offset);
+      }
+    }
+
+    .right-nav {
+      width: 20%;
     }
   }
 }
