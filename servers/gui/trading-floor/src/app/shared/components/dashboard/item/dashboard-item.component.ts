@@ -7,6 +7,6 @@ import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DashboardItemComponent {
-	@Input() readonly title: string;
-	@Input() readonly imgUrl: string;
+	@Input() public readonly title: string;
+	@Input() public readonly imgUrl: string;
 }

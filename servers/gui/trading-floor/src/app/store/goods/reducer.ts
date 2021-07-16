@@ -23,10 +23,10 @@ const initialGoodsState = {
 
 const reducer = createReducer<GoodsState>(
 	initialGoodsState,
-	on(GoodsActions.loadCatalogDataRequested, (state) => {
-		console.log('Reducer');
-		return StoreHelper.set(GoodsFields.CatalogDataLoadingStatus, status.loading, state) as GoodsState;
-	}),
+	on(
+		GoodsActions.loadCatalogDataRequested,
+		(state) => StoreHelper.set(GoodsFields.CatalogDataLoadingStatus, status.loading, state) as GoodsState
+	),
 	on(
 		GoodsActions.loadCatalogDataSucceeded,
 		(state, {payload}) =>

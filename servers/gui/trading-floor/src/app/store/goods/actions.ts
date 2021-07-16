@@ -13,7 +13,7 @@ const TYPES = {
 
 export const GoodsActions = {
 	types: TYPES,
-	loadCatalogDataRequested: createAction(TYPES.LOAD_CATALOG_DATA.REQUESTED, props<{payload: ICatalog.CatalogName}>()),
+	loadCatalogDataRequested: createAction(TYPES.LOAD_CATALOG_DATA.REQUESTED),
 	loadCatalogDataSucceeded: createAction(
 		TYPES.LOAD_CATALOG_DATA.SUCCEEDED,
 		props<{payload: ICatalog.CatalogData[]}>()

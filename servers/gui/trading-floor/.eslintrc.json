@@ -66,12 +66,13 @@
           }
         ],
         "@typescript-eslint/explicit-member-accessibility": [
-          "warn",
+          "error",
           {
             "accessibility": "explicit",
             "overrides": {
               "methods": "explicit",
-              "properties": "no-public"
+              "properties": "explicit",
+              "constructors": "no-public"
             }
           }
         ],

@@ -15,7 +15,7 @@ const APP_REDUCERS = {
 	imports: [
 		StoreModule.forRoot(APP_REDUCERS),
 		StoreRouterConnectingModule.forRoot({
-			navigationActionTiming: NavigationActionTiming.PostActivation,
+			navigationActionTiming: NavigationActionTiming.PreActivation,
 		}),
 		StoreDevtoolsModule.instrument(),
 	],
