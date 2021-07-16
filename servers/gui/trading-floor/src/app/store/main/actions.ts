@@ -1,17 +1,17 @@
-import {StoreHelper} from '@shared/helpers/store.helper';
+import {EStore} from '@entities/store/store.enums';
 import {createAction, props} from '@ngrx/store';
 import {IDashboard} from '@entities/shared/components/dashboard/dashboard.interfaces';
 import {CustomError} from '@entities/common/common.interfaces';
-import {EStore} from '@entities/store/store.enums';
+import {StoreHelper} from '@shared/helpers/store.helper';
 
-const moduleName = EStore.Modules.Dashboard;
+const moduleName = EStore.Modules.Main;
 const moduleDataLoadingActionNameCreator = StoreHelper.getModuleDataLoadingActionNameSetCreator(moduleName);
 
 const TYPES = {
 	LOAD_CATEGORY_DATA: moduleDataLoadingActionNameCreator('Categories'),
 };
 
-export const DashboardActions = {
+export const MainActions = {
 	types: TYPES,
 	loadCategoriesRequested: createAction(TYPES.LOAD_CATEGORY_DATA.REQUESTED),
 	loadCategoriesSucceeded: createAction(

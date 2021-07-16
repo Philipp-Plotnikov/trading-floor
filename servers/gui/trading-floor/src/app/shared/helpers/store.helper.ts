@@ -17,10 +17,14 @@ export class StoreHelper {
 		});
 	}
 
-	public static set<T extends PureObject>(key: string, value: unknown, object?: T): T | ((state: T) => T) {
+	public static set<T extends PureObject>(key: string | string[], value: unknown, object?: T): T | ((state: T) => T) {
 		if (!object) {
-			return (state: T) => set(clone(state), key, value);
+			return (state: T) => set(StoreHelper.clone(state), key, value);
 		}
-		return set(clone(object), key, value);
+		return set(StoreHelper.clone(object), key, value);
+	}
+
+	public static clone<T>(object: T): T {
+		return JSON.parse(JSON.stringify(object)) as T;
 	}
 }

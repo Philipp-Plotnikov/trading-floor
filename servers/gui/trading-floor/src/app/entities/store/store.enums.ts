@@ -1,5 +1,9 @@
 export namespace EStore {
 	export enum Modules {
-		Dashboard = 'dashboard',
+		Main = 'main',
+		Goods = 'goods',
+		Product = 'product',
+		Cart = 'cart',
+		Router = 'router',
 	}
 }

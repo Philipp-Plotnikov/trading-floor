@@ -1,8 +1,9 @@
 import {NgModule, Type} from '@angular/core';
 import {EffectsModule} from '@ngrx/effects';
-import {DashboardEffects} from '@store/dashboard/effects';
+import {MainEffects} from '@store/main/effects';
+import {GoodsEffects} from '@store/goods/effects';
 
-export const ROOT_EFFECTS: Type<any>[] = [DashboardEffects];
+export const ROOT_EFFECTS: Type<any>[] = [MainEffects, GoodsEffects];
 
 @NgModule({
 	imports: [EffectsModule.forRoot(ROOT_EFFECTS)],
