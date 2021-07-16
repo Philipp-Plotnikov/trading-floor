@@ -1,7 +1,7 @@
 import {NgModule} from '@angular/core';
 import {StoreModule} from '@ngrx/store';
 import {StoreDevtoolsModule} from '@ngrx/store-devtools';
-import {NavigationActionTiming, routerReducer, StoreRouterConnectingModule} from '@ngrx/router-store';
+import {routerReducer, StoreRouterConnectingModule} from '@ngrx/router-store';
 import {mainReducer} from '@store/main/reducer';
 import {goodsReducer} from '@store/goods/reducer';
 
@@ -14,9 +14,7 @@ const APP_REDUCERS = {
 @NgModule({
 	imports: [
 		StoreModule.forRoot(APP_REDUCERS),
-		StoreRouterConnectingModule.forRoot({
-			navigationActionTiming: NavigationActionTiming.PreActivation,
-		}),
+		StoreRouterConnectingModule.forRoot(),
 		StoreDevtoolsModule.instrument(),
 	],
 })
