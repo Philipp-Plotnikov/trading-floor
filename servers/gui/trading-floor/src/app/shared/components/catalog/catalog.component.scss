@@ -1,0 +1,21 @@
+$grid-gap: var(--offset-l);
+$column-amount: 4;
+$gap-amount: $column-amount - 1;
+$sum-grid-gap: calc(#{$gap-amount} * #{$grid-gap});
+$sum-outside-padding: calc(var(--offset-xl) * 2);
+$fraction: 1 / $column-amount;
+$column-width: calc((100vw - #{$sum-grid-gap} - #{$sum-outside-padding}) * #{$fraction});
+
+:host {
+  display: block;
+  background-color: var(--main-bg);
+  width: 100%;
+
+  .grid {
+    overflow: hidden;
+    display: grid;
+    padding: var(--offset-m) var(--offset-xl);
+    gap: $grid-gap;
+    grid-template-columns: repeat($column-amount, $column-width);
+  }
+}

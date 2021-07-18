@@ -1,8 +1,9 @@
 <article class="card clickable">
 	<div class="content">
 		<div class="img" [style.backgroundImage]="'url(' + data.imgUrl + ')'"></div>
-		<p class="description">{{ data.description }}</p>
-		<span class="mark">{{ data.mark }}</span>
-		<span class="price">{{ data.price }}</span>
+		<div class="text-content">
+			<p class="description">{{ data.description }}</p>
+			<span class="price">{{ data.price }} &#8381;</span>
+		</div>
 	</div>
 </article>

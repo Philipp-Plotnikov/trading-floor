@@ -33,7 +33,7 @@ $img-height: calc(#{$content-width} * #{$aspect});
       .img {
         width: 100%;
         height: $img-height;
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;
         background-position: center;
       }
