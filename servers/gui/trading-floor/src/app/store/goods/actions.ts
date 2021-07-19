@@ -8,7 +8,7 @@ const moduleName = EStore.Modules.Goods;
 const moduleDataLoadingActionNameCreator = StoreHelper.getModuleDataLoadingActionNameSetCreator(moduleName);
 
 const TYPES = {
-	LOAD_CATALOG_DATA: moduleDataLoadingActionNameCreator('Catalog data'),
+	LOAD_CATALOG_DATA: moduleDataLoadingActionNameCreator('Load catalog data'),
 };
 
 export const GoodsActions = {

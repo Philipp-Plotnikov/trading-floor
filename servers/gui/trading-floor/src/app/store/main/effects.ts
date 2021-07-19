@@ -7,7 +7,7 @@ import {DashboardMochs} from '../../mochs/dashboard.mochs';
 
 @Injectable()
 export class MainEffects {
-	loadCategoryData$ = createEffect(() =>
+	public loadCategoryData$ = createEffect(() =>
 		this.actions$.pipe(
 			ofType(MainActions.loadCategoriesRequested),
 			delay(1000),

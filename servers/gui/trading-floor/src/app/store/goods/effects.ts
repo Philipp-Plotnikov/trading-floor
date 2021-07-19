@@ -9,7 +9,7 @@ import {CatalogMochs} from '../../mochs/catalog.mochs';
 
 @Injectable()
 export class GoodsEffects {
-	loadCatalogData$ = createEffect(() =>
+	public loadCatalogData$ = createEffect(() =>
 		this.actions$.pipe(
 			ofType(GoodsActions.loadCatalogDataRequested),
 			withLatestFrom(this.store.select(routerSelector.selectRouteParam('catalogName'))),

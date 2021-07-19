@@ -25,7 +25,7 @@ export interface MainState {
 }
 
 // INITIAL STATES
-export const initialMainState = {
+const initialMainState = {
 	[MainFields.Dashboard]: null,
 };
 

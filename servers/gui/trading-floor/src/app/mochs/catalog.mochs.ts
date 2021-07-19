@@ -4,6 +4,7 @@ export namespace CatalogMochs {
 	export const GOODS: Record<string, ICatalog.CatalogData[]> = {
 		computers: [
 			{
+				id: '1',
 				imgUrl: 'https://m.media-amazon.com/images/I/51GxgHSNolL._AC_UL320_.jpg',
 				description: `
 				  Bestol Original Genuine for Changhong LED40YC1700UA LED42YC2000UA GCBLTV50U-C1 LCD LED HDTV TV
@@ -12,6 +13,7 @@ export namespace CatalogMochs {
 				mark: 3,
 			},
 			{
+				id: '2',
 				imgUrl: 'https://m.media-amazon.com/images/I/61KEl+s4FES._AC_UL320_.jpg',
 				description: `
 				  ASA LED TV with Integrated HDTV JTV24DC
@@ -20,6 +22,7 @@ export namespace CatalogMochs {
 				mark: 4,
 			},
 			{
+				id: '3',
 				imgUrl: 'https://m.media-amazon.com/images/I/71LJJrKbezL._AC_UL320_.jpg',
 				description: `
 				  SAMSUNG 50-Inch Class Crystal UHD AU8000 Series - 4K UHD HDR Smart TV
@@ -29,6 +32,7 @@ export namespace CatalogMochs {
 				mark: 4,
 			},
 			{
+				id: '4',
 				imgUrl: 'https://m.media-amazon.com/images/I/71wYJc19PiL._AC_UL480_FMwebp_QL65_.jpg',
 				description: `
 				  TCL 32-inch 1080p Roku Smart LED TV - 32S327, 2019 Model
@@ -37,6 +41,7 @@ export namespace CatalogMochs {
 				mark: 3,
 			},
 			{
+				id: '5',
 				imgUrl: 'https://m.media-amazon.com/images/I/51GxgHSNolL._AC_UL320_.jpg',
 				description: `
 				  Bestol Original Genuine for Changhong LED40YC1700UA LED42YC2000UA GCBLTV50U-C1 LCD LED HDTV TV
@@ -45,6 +50,7 @@ export namespace CatalogMochs {
 				mark: 3,
 			},
 			{
+				id: '6',
 				imgUrl: 'https://m.media-amazon.com/images/I/61KEl+s4FES._AC_UL320_.jpg',
 				description: `
 				  ASA LED TV with Integrated HDTV JTV24DC
@@ -53,6 +59,7 @@ export namespace CatalogMochs {
 				mark: 4,
 			},
 			{
+				id: '7',
 				imgUrl: 'https://m.media-amazon.com/images/I/71LJJrKbezL._AC_UL320_.jpg',
 				description: `
 				  SAMSUNG 50-Inch Class Crystal UHD AU8000 Series - 4K UHD HDR Smart TV
@@ -62,6 +69,7 @@ export namespace CatalogMochs {
 				mark: 4,
 			},
 			{
+				id: '8',
 				imgUrl: 'https://m.media-amazon.com/images/I/71wYJc19PiL._AC_UL480_FMwebp_QL65_.jpg',
 				description: `
 				  TCL 32-inch 1080p Roku Smart LED TV - 32S327, 2019 Model
@@ -72,6 +80,7 @@ export namespace CatalogMochs {
 		],
 		basics: [
 			{
+				id: '1',
 				imgUrl: 'https://m.media-amazon.com/images/I/912IUzPWjjL._AC_UL320_.jpg',
 				description: `
 				  Amazon Basics Kids Fleece Tail Blanket - 26'' x 56'', Pink Mermaid
@@ -80,6 +89,7 @@ export namespace CatalogMochs {
 				mark: 5,
 			},
 			{
+				id: '2',
 				imgUrl: 'https://m.media-amazon.com/images/I/81ET5Y7uyKL._AC_UL320_.jpg',
 				description: `
           Amazon Basics Kids Ultra-Soft Micromink Sherpa Blanket - Throw, Midnight Blue
@@ -88,6 +98,7 @@ export namespace CatalogMochs {
 				mark: 5,
 			},
 			{
+				id: '3',
 				imgUrl: 'https://m.media-amazon.com/images/I/81Fv47M5u5L._AC_UL320_.jpg',
 				description: `
           Amazon Basics Kids Unicorns & Rainbows Patterned Throw Blanket
@@ -97,6 +108,7 @@ export namespace CatalogMochs {
 				mark: 5,
 			},
 			{
+				id: '4',
 				imgUrl: 'https://m.media-amazon.com/images/I/81dsYE5uUdL._AC_UL320_.jpg',
 				description: `
           Amazon Basics Kids Space Rocket Bedding Nap Set
@@ -106,6 +118,7 @@ export namespace CatalogMochs {
 				mark: 5,
 			},
 			{
+				id: '5',
 				imgUrl: 'https://m.media-amazon.com/images/I/912IUzPWjjL._AC_UL320_.jpg',
 				description: `
 				  Amazon Basics Kids Fleece Tail Blanket - 26'' x 56'', Pink Mermaid
@@ -114,6 +127,7 @@ export namespace CatalogMochs {
 				mark: 5,
 			},
 			{
+				id: '6',
 				imgUrl: 'https://m.media-amazon.com/images/I/81ET5Y7uyKL._AC_UL320_.jpg',
 				description: `
           Amazon Basics Kids Ultra-Soft Micromink Sherpa Blanket - Throw, Midnight Blue
@@ -122,6 +136,7 @@ export namespace CatalogMochs {
 				mark: 5,
 			},
 			{
+				id: '7',
 				imgUrl: 'https://m.media-amazon.com/images/I/81Fv47M5u5L._AC_UL320_.jpg',
 				description: `
           Amazon Basics Kids Unicorns & Rainbows Patterned Throw Blanket
@@ -131,6 +146,7 @@ export namespace CatalogMochs {
 				mark: 5,
 			},
 			{
+				id: '8',
 				imgUrl: 'https://m.media-amazon.com/images/I/81dsYE5uUdL._AC_UL320_.jpg',
 				description: `
           Amazon Basics Kids Space Rocket Bedding Nap Set
@@ -142,6 +158,7 @@ export namespace CatalogMochs {
 		],
 		oculus: [
 			{
+				id: '1',
 				imgUrl: 'https://m.media-amazon.com/images/I/615YaAiA-ML._AC_UY218_.jpg',
 				description: `
 				  Oculus Quest 2 — Advanced All-In-One Virtual Reality Headset — 256 GB
@@ -150,6 +167,7 @@ export namespace CatalogMochs {
 				mark: 5,
 			},
 			{
+				id: '2',
 				imgUrl: 'https://m.media-amazon.com/images/I/71URNvzoWqL._AC_UY218_.jpg',
 				description: `
 				  Oculus Rift S PC-Powered VR Gaming Headset
@@ -158,6 +176,7 @@ export namespace CatalogMochs {
 				mark: 4,
 			},
 			{
+				id: '3',
 				imgUrl: 'https://m.media-amazon.com/images/I/71URNvzoWqL._AC_UY218_.jpg',
 				description: `
 				  Oculus Rift S PC-Powered VR Gaming Headset
@@ -166,6 +185,7 @@ export namespace CatalogMochs {
 				mark: 5,
 			},
 			{
+				id: '4',
 				imgUrl: 'https://m.media-amazon.com/images/I/61jBGbu2rkL._AC_UY218_.jpg',
 				description: `
 				  Flagship Oculus Quest 2 All-in-One Virtual Reality 64GB Gaming
@@ -176,6 +196,7 @@ export namespace CatalogMochs {
 				mark: 5,
 			},
 			{
+				id: '5',
 				imgUrl: 'https://m.media-amazon.com/images/I/615YaAiA-ML._AC_UY218_.jpg',
 				description: `
 				  Oculus Quest 2 — Advanced All-In-One Virtual Reality Headset — 256 GB
@@ -184,6 +205,7 @@ export namespace CatalogMochs {
 				mark: 5,
 			},
 			{
+				id: '6',
 				imgUrl: 'https://m.media-amazon.com/images/I/71URNvzoWqL._AC_UY218_.jpg',
 				description: `
 				  Oculus Rift S PC-Powered VR Gaming Headset
@@ -192,6 +214,7 @@ export namespace CatalogMochs {
 				mark: 4,
 			},
 			{
+				id: '7',
 				imgUrl: 'https://m.media-amazon.com/images/I/71URNvzoWqL._AC_UY218_.jpg',
 				description: `
 				  Oculus Rift S PC-Powered VR Gaming Headset
@@ -200,6 +223,7 @@ export namespace CatalogMochs {
 				mark: 5,
 			},
 			{
+				id: '8',
 				imgUrl: 'https://m.media-amazon.com/images/I/61jBGbu2rkL._AC_UY218_.jpg',
 				description: `
 				  Flagship Oculus Quest 2 All-in-One Virtual Reality 64GB Gaming
@@ -210,29 +234,8 @@ export namespace CatalogMochs {
 				mark: 5,
 			},
 		],
-		home: [
-			{
-				imgUrl: '',
-				description: '',
-				price: 0,
-				mark: 0,
-			},
-		],
-		tv: [
-			{
-				imgUrl: '',
-				description: '',
-				price: 0,
-				mark: 0,
-			},
-		],
-		picks: [
-			{
-				imgUrl: '',
-				description: '',
-				price: 0,
-				mark: 0,
-			},
-		],
+		home: [],
+		tv: [],
+		picks: [],
 	};
 }

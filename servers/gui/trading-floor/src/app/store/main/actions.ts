@@ -8,7 +8,7 @@ const moduleName = EStore.Modules.Main;
 const moduleDataLoadingActionNameCreator = StoreHelper.getModuleDataLoadingActionNameSetCreator(moduleName);
 
 const TYPES = {
-	LOAD_CATEGORY_DATA: moduleDataLoadingActionNameCreator('Categories'),
+	LOAD_CATEGORY_DATA: moduleDataLoadingActionNameCreator('Load category data'),
 };
 
 export const MainActions = {
