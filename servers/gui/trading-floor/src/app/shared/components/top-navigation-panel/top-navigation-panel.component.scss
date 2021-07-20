@@ -70,10 +70,12 @@ $border-width: 0.1rem;
         border: $border-width solid transparent;
         font-size: calc(#{$text-content-font-size} + #{$delta});
         padding: var(--offset-xs) var(--offset-s);
+        color: var(--white);
 
         .cart-icon {
           @include icon-size(2rem);
           margin-right: var(--offset-xs);
+          color: var(--white);
         }
       }
 

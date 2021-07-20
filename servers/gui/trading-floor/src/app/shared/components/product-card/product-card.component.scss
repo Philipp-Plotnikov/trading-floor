@@ -3,6 +3,14 @@
   width: 100%;
 
   .card {
-    color: var(--black);
+    display: flex;
+
+    .left-side {
+      width: 40%;
+    }
+
+    .right-side {
+      width: 60%;
+    }
   }
 }
