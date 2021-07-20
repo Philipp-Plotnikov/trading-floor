@@ -12,7 +12,6 @@ $column-width: calc((100vw - #{$sum-grid-gap} - #{$sum-outside-padding}) * #{$fr
   width: 100%;
 
   .grid {
-    overflow: hidden;
     display: grid;
     padding: var(--offset-m) var(--offset-xl);
     gap: $grid-gap;

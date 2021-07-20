@@ -1,8 +1,10 @@
-<article class="card">
-	<div class="left-side">
-		<left-product-card-side></left-product-card-side>
-	</div>
-	<div class="right-side">
-		<right-product-card-side></right-product-card-side>
-	</div>
-</article>
+<mat-card class="card">
+	<mat-card-content class="content">
+		<div class="left-side">
+			<left-product-card-side class="left-product-card-side" [productData]="productData"></left-product-card-side>
+		</div>
+		<div class="right-side">
+			<right-product-card-side [productData]="productData"></right-product-card-side>
+		</div>
+	</mat-card-content>
+</mat-card>

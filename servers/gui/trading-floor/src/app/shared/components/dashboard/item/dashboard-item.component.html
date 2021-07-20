@@ -1,7 +1,9 @@
-<article class="card clickable">
-	<div class="content">
-		<h4 class="title">{{ title }}</h4>
+<mat-card class="card clickable">
+	<mat-card-title class="title">{{ title }}</mat-card-title>
+	<mat-card-content class="content">
 		<div class="img" [style.backgroundImage]="'url(' + imgUrl + ')'"></div>
+	</mat-card-content>
+	<mat-card-actions class="button-container">
 		<button class="button clickable">посмотреть</button>
-	</div>
-</article>
+	</mat-card-actions>
+</mat-card>

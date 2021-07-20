@@ -6,6 +6,7 @@ import {RightProductCardSideComponent} from './right-side/right-product-card-sid
 import {LeftProductCardSideComponent} from './left-side/left-product-card-side.component';
 import {RightProductCardSideContainer} from '@shared/components/product-card/right-side/right-product-card-side.container';
 import {LeftProductCardSideContainer} from '@shared/components/product-card/left-side/left-product-card-side.container';
+import {MatCardModule} from '@angular/material/card';
 
 @NgModule({
 	declarations: [
@@ -16,7 +17,7 @@ import {LeftProductCardSideContainer} from '@shared/components/product-card/left
 		LeftProductCardSideContainer,
 		RightProductCardSideContainer,
 	],
-	imports: [CommonModule],
+	imports: [CommonModule, MatCardModule],
 	exports: [ProductCardContainer],
 })
 export class ProductCardModule {}

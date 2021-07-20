@@ -3,14 +3,21 @@
   width: 100%;
 
   .card {
-    display: flex;
+    .content {
+      display: flex;
 
-    .left-side {
-      width: 40%;
-    }
+      .left-side {
+        width: 40%;
 
-    .right-side {
-      width: 60%;
+        .left-product-card-side {
+          display: block;
+          height: 100%;
+        }
+      }
+
+      .right-side {
+        width: 60%;
+      }
     }
   }
 }
