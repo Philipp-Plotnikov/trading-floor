@@ -1,0 +1,24 @@
+<header class="header">
+	<h3 class="title">{{ productData.title }}</h3>
+</header>
+<div class="content">
+	<span class="parameter-desc">{{ productData.parameterDesc }}</span>
+	<div class="parameters">
+		<div class="parameter-key-container">
+			<span class="parameter-key" *ngFor="let item of productData.parameters">
+				{{ item.key }}
+			</span>
+		</div>
+		<div class="parameter-value-container">
+			<span class="parameter-value" *ngFor="let item of productData.parameters">
+				{{ item.value }}
+			</span>
+		</div>
+	</div>
+	<div class="detailed-desc-container">
+		<h4>Об этом товаре</h4>
+		<ul class="detailed-desc-list">
+			<li *ngFor="let item of productData.detailedDesc">{{ item }}</li>
+		</ul>
+	</div>
+</div>
