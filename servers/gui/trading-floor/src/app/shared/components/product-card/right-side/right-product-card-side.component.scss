@@ -1,6 +1,59 @@
 :host {
   display: block;
   width: 100%;
+  font-size: 1rem;
 
+  .header {
+    .title {
+      margin: 0;
+      font-weight: var(--bold);
+      font-size: 1.3rem;
+    }
+  }
 
+  .content {
+    margin-top: var(--offset-m);
+
+    .parameters {
+      display: flex;
+      margin-top: var(--offset);
+
+      > * {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .parameter-key:not(:first-of-type),
+      .parameter-value:not(:first-of-type) {
+        margin-top: var(--offset-s);
+      }
+
+      .parameter-value-container {
+        margin-left: 10%;
+      }
+    }
+
+    .detailed-desc-container {
+      margin-top: var(--offset-m);
+
+      .subtitle {
+        margin: 0;
+        font-weight: var(--medium);
+        font-size: 1.1rem;
+      }
+
+      .detailed-desc-list {
+        margin-top: var(--offset-s);
+        margin-left: 18px;
+
+        .detailed-desc-list-item {
+          list-style: initial;
+        }
+
+        .detailed-desc-list-item:not(:first-of-type) {
+          margin-top: var(--offset-s);
+        }
+      }
+    }
+  }
 }

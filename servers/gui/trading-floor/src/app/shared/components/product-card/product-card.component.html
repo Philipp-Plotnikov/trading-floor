@@ -1,4 +1,4 @@
-<mat-card class="card">
+<mat-card class="card" *ngIf="productDataLoadingStatus?.loaded">
 	<mat-card-content class="content">
 		<div class="left-side">
 			<left-product-card-side class="left-product-card-side" [productData]="productData"></left-product-card-side>
