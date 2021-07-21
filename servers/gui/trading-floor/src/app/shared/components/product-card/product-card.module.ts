@@ -7,6 +7,7 @@ import {LeftProductCardSideComponent} from './left-side/left-product-card-side.c
 import {RightProductCardSideContainer} from '@shared/components/product-card/right-side/right-product-card-side.container';
 import {LeftProductCardSideContainer} from '@shared/components/product-card/left-side/left-product-card-side.container';
 import {MatCardModule} from '@angular/material/card';
+import {MatButtonModule} from '@angular/material/button';
 
 @NgModule({
 	declarations: [
@@ -17,7 +18,7 @@ import {MatCardModule} from '@angular/material/card';
 		LeftProductCardSideContainer,
 		RightProductCardSideContainer,
 	],
-	imports: [CommonModule, MatCardModule],
+	imports: [CommonModule, MatCardModule, MatButtonModule],
 	exports: [ProductCardContainer],
 })
 export class ProductCardModule {}
