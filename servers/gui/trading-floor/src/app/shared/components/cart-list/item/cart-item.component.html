@@ -1,1 +1,9 @@
-<p>cart-item works!</p>
+<div class="container">
+	<div class="img-container" [style.backgroundImage]="data.imgUrl"></div>
+	<div class="description-container">
+		<h4>{{ data.title }}</h4>
+		<ul class="parameter-list">
+			<li class="parameter-item"><span class="key">Кол-во: </span> {{ data.amount }}</li>
+		</ul>
+	</div>
+</div>

@@ -77,6 +77,13 @@ $border-width: 0.1rem;
           margin-right: var(--offset-xs);
           color: var(--white);
         }
+
+        .counter {
+          display: block;
+          margin-left: var(--offset-s);
+          color: var(--cart-number);
+          font-size: 1.2rem;
+        }
       }
 
       .cart-container:hover {

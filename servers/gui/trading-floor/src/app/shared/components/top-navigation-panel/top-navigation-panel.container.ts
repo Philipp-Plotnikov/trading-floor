@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
 import {LocalStorageHelper} from '@shared/helpers/local-storage.helper';
 import {LocalStorageEvents} from '@entities/common/common.enums';
 
@@ -7,14 +7,19 @@ import {LocalStorageEvents} from '@entities/common/common.enums';
 	template: ' <top-navigation-panel-component [counter]="counter"></top-navigation-panel-component> ',
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TopNavigationPanelContainer {
+export class TopNavigationPanelContainer implements OnInit {
 	public counter: number;
 
-	constructor() {
+	constructor(private cdr: ChangeDetectorRef) {
 		LocalStorageHelper.on(LocalStorageEvents.Change, this.onStorageChanged.bind(this));
+	}
+
+	public ngOnInit(): void {
+		this.counter = LocalStorageHelper.getCartItemAmount();
 	}
 
 	private onStorageChanged(): void {
 		this.counter = LocalStorageHelper.getCartItemAmount();
+		this.cdr.markForCheck();
 	}
 }

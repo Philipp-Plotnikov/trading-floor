@@ -8,7 +8,7 @@ export class CartListHelper {
 		const result: ICartList.StorageData = Object.create(null);
 		cartItemData.forEach((cartItem) => {
 			const key = LocalStorageHelper.createCartItemKey(cartItem);
-			result[key] = new CartItem.Data(cartItem.title, cartItem.imgUrl, cartItem.amount);
+			result[key] = new CartItem.Data(cartItem.title, cartItem.imgUrl, cartItem.amount).getMapObject();
 		});
 		return result;
 	}

@@ -8,7 +8,7 @@ export const status: Statuses = {
 	error: (error: string) => ({loading: false, loaded: false, error}),
 };
 
-export const CART_LOCAL_STORAGE_KEY = 'keyData';
+export const CART_LOCAL_STORAGE_KEY = 'CART_DATA';
 
 export const LOCAL_STORAGE_EVENTS_HANDLER_STORE: LocalStorageEventsHandlerStore = {
 	[LocalStorageEvents.Change]: [],

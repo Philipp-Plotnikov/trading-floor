@@ -22,5 +22,9 @@ export namespace CartItem {
 		public set amount(value: number) {
 			this._amount = value;
 		}
+
+		public getMapObject(): Data {
+			return Object.create(null, Object.getOwnPropertyDescriptors(this)) as Data;
+		}
 	}
 }
