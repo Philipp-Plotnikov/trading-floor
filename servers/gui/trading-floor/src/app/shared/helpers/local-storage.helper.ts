@@ -56,6 +56,9 @@ export class LocalStorageHelper {
 	}
 
 	public static getCartItemAmount(): number {
+		if (LocalStorageHelper.isEmpty(CART_STORAGE_KEY)) {
+			return null;
+		}
 		const storageCartData = LocalStorageHelper.getData<ICartList.StorageData>(CART_STORAGE_KEY);
 		const processedCartData = Object.values(storageCartData);
 		let amount = 0;
@@ -65,7 +68,7 @@ export class LocalStorageHelper {
 		return amount;
 	}
 
-	private static createCartItemKey(data: IProductCard.ProductData): string {
+	public static createCartItemKey(data: IProductCard.ProductData): string {
 		return data.title;
 	}
 

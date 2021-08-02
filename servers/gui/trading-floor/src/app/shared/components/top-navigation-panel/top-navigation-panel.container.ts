@@ -4,7 +4,7 @@ import {LocalStorageEvents} from '@entities/common/common.enums';
 
 @Component({
 	selector: 'top-navigation-panel',
-	template: ' <top-navigation-panel-component ></top-navigation-panel-component> ',
+	template: ' <top-navigation-panel-component [counter]="counter"></top-navigation-panel-component> ',
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class TopNavigationPanelContainer {
