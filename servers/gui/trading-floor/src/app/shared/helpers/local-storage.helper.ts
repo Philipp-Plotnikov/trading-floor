@@ -2,8 +2,13 @@ import {IProductCard} from '@entities/shared/components/product-card/product-car
 import {ICartList} from '@entities/shared/components/cart-list/cart-list.interfaces';
 import {CART_STORAGE_KEY} from '../../config';
 import {CartItem} from '@entities/shared/components/cart-item/cart-item.classes';
+import {LocalStorageEvents} from '@entities/common/common.enums';
+import {LocalStorageEventsHandler} from '@entities/common/common.interfaces';
+import {LOCAL_STORAGE_EVENTS_HANDLER_STORE} from '@entities/common/common.constants';
 
 export class LocalStorageHelper {
+	private static EVENT_HANDLERS = LOCAL_STORAGE_EVENTS_HANDLER_STORE;
+
 	public static getData<T>(key: string): T {
 		const rawData = localStorage.getItem(key);
 		return JSON.parse(rawData) as T;
@@ -41,6 +46,20 @@ export class LocalStorageHelper {
 	public static isEmpty(key: string): boolean {
 		const data = LocalStorageHelper.getData(key);
 		return !data;
+	}
+
+	public static on(event: LocalStorageEvents, cb: LocalStorageEventsHandler): void {
+		this.EVENT_HANDLERS[event].push(cb);
+	}
+
+	public static getCartItemAmount(): number {
+		const storageCartData = LocalStorageHelper.getData<ICartList.StorageData>(CART_STORAGE_KEY);
+		const processedCartData = Object.values(storageCartData);
+		let amount = 0;
+		processedCartData.forEach((cartItem: CartItem.Data) => {
+			amount += cartItem.amount;
+		});
+		return amount;
 	}
 
 	private static createCartItemKey(data: IProductCard.ProductData): string {

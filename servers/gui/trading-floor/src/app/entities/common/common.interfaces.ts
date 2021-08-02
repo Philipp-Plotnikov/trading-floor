@@ -1,3 +1,5 @@
+import {LocalStorageEvents} from '@entities/common/common.enums';
+
 export type LoadingStatus =
 	| {loading: false; loaded: false; error: null}
 	| {loading: true; loaded: false; error: null}
@@ -14,5 +16,9 @@ export interface Statuses {
 export interface ErrorObject {
 	errorMessage: string;
 }
+
+export type LocalStorageEventsHandler = () => void;
+
+export type LocalStorageEventsHandlerStore = Record<LocalStorageEvents, LocalStorageEventsHandler[]>;
 
 export type PureObject = Record<string, any>;

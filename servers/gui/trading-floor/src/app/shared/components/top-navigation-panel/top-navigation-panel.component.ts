@@ -1,4 +1,4 @@
-import {ChangeDetectionStrategy, Component} from '@angular/core';
+import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 
 @Component({
 	selector: 'top-navigation-panel-component',
@@ -6,4 +6,6 @@ import {ChangeDetectionStrategy, Component} from '@angular/core';
 	styleUrls: ['./top-navigation-panel.component.scss'],
 	changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class TopNavigationPanelComponent {}
+export class TopNavigationPanelComponent {
+	@Input() public readonly counter: number;
+}
