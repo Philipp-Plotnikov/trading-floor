@@ -21,6 +21,7 @@ export class LocalStorageHelper {
 		}
 		const rawData = JSON.stringify(data);
 		localStorage.setItem(key, rawData);
+		this.callHandlers([LocalStorageEvents.Change]);
 	}
 
 	public static modifyCartData(data: IProductCard.ProductData): void {
@@ -37,10 +38,12 @@ export class LocalStorageHelper {
 
 	public static removeData(key: string): void {
 		localStorage.removeItem(key);
+		this.callHandlers([LocalStorageEvents.Change]);
 	}
 
 	public static clearStorage(): void {
 		localStorage.clear();
+		this.callHandlers([LocalStorageEvents.Change]);
 	}
 
 	public static isEmpty(key: string): boolean {
@@ -64,5 +67,13 @@ export class LocalStorageHelper {
 
 	private static createCartItemKey(data: IProductCard.ProductData): string {
 		return data.title;
+	}
+
+	private static callHandlers($events: LocalStorageEvents[]): void {
+		$events.forEach(($event) => {
+			this.EVENT_HANDLERS[$event].forEach((cb) => {
+				cb();
+			});
+		});
 	}
 }
