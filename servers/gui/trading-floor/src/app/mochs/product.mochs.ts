@@ -39,7 +39,7 @@ export namespace ProductMochs {
 					'remote control for changhong LCD TV GCBLTV50U-C1 LED40YC1700UA LED42YC2000UA controller',
 				],
 				price: 1100,
-				amountInStock: 1,
+				amount: 1,
 			},
 		},
 	};

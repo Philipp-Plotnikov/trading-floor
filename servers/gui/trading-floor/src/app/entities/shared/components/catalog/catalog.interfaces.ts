@@ -7,3 +7,8 @@ export namespace ICatalog {
 		mark: number;
 	}
 }
+
+/*
+ * Catalogs
+ * [${catalogName}]: "[{}, {}, ...]";
+ * */

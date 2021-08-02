@@ -1,7 +1,7 @@
 import {EStore} from '@entities/store/store.enums';
 import {StoreHelper} from '@shared/helpers/store.helper';
 import {createAction, props} from '@ngrx/store';
-import {CustomError} from '@entities/common/common.interfaces';
+import {ErrorObject} from '@entities/common/common.interfaces';
 import {IProductCard} from '@entities/shared/components/product-card/product-card.interface';
 
 const moduleName = EStore.Modules.Product;
@@ -18,5 +18,5 @@ export const ProductActions = {
 		TYPES.LOAD_PRODUCT_DATA.SUCCEEDED,
 		props<{payload: IProductCard.ProductData}>()
 	),
-	loadProductDataFailed: createAction(TYPES.LOAD_PRODUCT_DATA.FAILED, props<{payload: CustomError}>()),
+	loadProductDataFailed: createAction(TYPES.LOAD_PRODUCT_DATA.FAILED, props<{payload: ErrorObject}>()),
 };

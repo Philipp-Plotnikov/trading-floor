@@ -8,7 +8,7 @@ export namespace IProductCard {
 		parameters: {key: string; value: string}[];
 		detailedDesc: string[];
 		price: number;
-		amountInStock: number;
+		amount: number;
 	}
 
 	export interface RequestProductDataParams {

@@ -1,7 +1,7 @@
 import {EStore} from '@entities/store/store.enums';
 import {createAction, props} from '@ngrx/store';
 import {IDashboard} from '@entities/shared/components/dashboard/dashboard.interfaces';
-import {CustomError} from '@entities/common/common.interfaces';
+import {ErrorObject} from '@entities/common/common.interfaces';
 import {StoreHelper} from '@shared/helpers/store.helper';
 
 const moduleName = EStore.Modules.Main;
@@ -18,5 +18,5 @@ export const MainActions = {
 		TYPES.LOAD_CATEGORY_DATA.SUCCEEDED,
 		props<{payload: IDashboard.CategoryData[]}>()
 	),
-	loadCategoriesFailed: createAction(TYPES.LOAD_CATEGORY_DATA.FAILED, props<{payload: CustomError}>()),
+	loadCategoriesFailed: createAction(TYPES.LOAD_CATEGORY_DATA.FAILED, props<{payload: ErrorObject}>()),
 };

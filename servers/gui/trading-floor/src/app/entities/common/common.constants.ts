@@ -6,3 +6,5 @@ export const status: Statuses = {
 	loaded: {loading: false, loaded: true, error: null},
 	error: (error: string) => ({loading: false, loaded: false, error}),
 };
+
+export const CART_LOCAL_STORAGE_KEY = 'keyData';

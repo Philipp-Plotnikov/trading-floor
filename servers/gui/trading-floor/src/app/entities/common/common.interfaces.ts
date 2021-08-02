@@ -11,7 +11,7 @@ export interface Statuses {
 	error: (error: string) => LoadingStatus;
 }
 
-export interface CustomError {
+export interface ErrorObject {
 	errorMessage: string;
 }
 
