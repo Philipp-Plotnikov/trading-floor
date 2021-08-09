@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, ChangeDetectorRef, Component, OnInit} from '@angular/core';
-import {LocalStorageHelper} from '@shared/helpers/local-storage.helper';
 import {LocalStorageEvents} from '@entities/common/common.enums';
+import {LocalStorageHelper} from '@shared/helpers/local-storage.helper';
 
 @Component({
 	selector: 'top-navigation-panel',
@@ -10,16 +10,16 @@ import {LocalStorageEvents} from '@entities/common/common.enums';
 export class TopNavigationPanelContainer implements OnInit {
 	public counter: number;
 
-	constructor(private cdr: ChangeDetectorRef) {
-		LocalStorageHelper.on(LocalStorageEvents.Change, this.onStorageChanged.bind(this));
+	constructor(private cdr: ChangeDetectorRef, private localStorageHelper: LocalStorageHelper) {
+		this.localStorageHelper.on(LocalStorageEvents.Change, this.onStorageChanged.bind(this));
 	}
 
 	public ngOnInit(): void {
-		this.counter = LocalStorageHelper.getCartItemAmount();
+		this.counter = this.localStorageHelper.getCartItemAmount();
 	}
 
 	private onStorageChanged(): void {
-		this.counter = LocalStorageHelper.getCartItemAmount();
+		this.counter = this.localStorageHelper.getCartItemAmount();
 		this.cdr.markForCheck();
 	}
 }

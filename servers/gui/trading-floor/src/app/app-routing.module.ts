@@ -7,7 +7,13 @@ import {REDIRECT_ROUTES} from '@entities/routing/routing.constants';
 const routes: Routes = [...RouterHelper.getPageRouteConfigs(ERouting.Pages), ...REDIRECT_ROUTES];
 
 @NgModule({
-	imports: [RouterModule.forRoot(routes, {useHash: true, preloadingStrategy: PreloadAllModules})],
+	imports: [
+		RouterModule.forRoot(routes, {
+			useHash: true,
+			preloadingStrategy: PreloadAllModules,
+			initialNavigation: 'enabled',
+		}),
+	],
 	exports: [RouterModule],
 })
 export class AppRoutingModule {}

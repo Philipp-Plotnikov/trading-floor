@@ -13,12 +13,14 @@ import {CartListHelper} from '@shared/helpers/cart-list.helper';
 export class RightProductCardSideComponent {
 	@Input() public readonly productData: IProductCard.ProductData;
 
+	constructor(private cartListHelper: CartListHelper, private localStorageHelper: LocalStorageHelper) {}
+
 	public onPutInCartButtonClick(): void {
-		if (LocalStorageHelper.isEmpty(CART_STORAGE_KEY)) {
-			const storageCartData = CartListHelper.createCartStorageData([this.productData]);
-			LocalStorageHelper.setData(CART_STORAGE_KEY, storageCartData);
+		if (this.localStorageHelper.isEmpty(CART_STORAGE_KEY)) {
+			const storageCartData = this.cartListHelper.createCartStorageData([this.productData]);
+			this.localStorageHelper.setData(CART_STORAGE_KEY, storageCartData);
 			return;
 		}
-		LocalStorageHelper.modifyCartData(this.productData);
+		this.localStorageHelper.modifyCartData(this.productData);
 	}
 }

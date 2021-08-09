@@ -1,7 +1,8 @@
 {
   "root": true,
   "ignorePatterns": [
-    "projects/**/*"
+    "projects/**/*",
+    "server.ts"
   ],
   "overrides": [
     {
@@ -187,6 +188,7 @@
         "@typescript-eslint/no-use-before-define": "error",
         "@typescript-eslint/no-floating-promises": "warn",
         "@typescript-eslint/prefer-function-type": "error",
+        "@typescript/ban-types": "off",
         "no-case-declarations": "off",
         "@typescript-eslint/unbound-method": [
           "error",

@@ -13,7 +13,7 @@ import {ApiService} from '@api/common.api.service';
 @NgModule({
 	declarations: [AppComponent],
 	imports: [
-		BrowserModule,
+		BrowserModule.withServerTransition({appId: 'serverApp'}),
 		BrowserAnimationsModule,
 		AppRoutingModule,
 		TopNavigationPanelModule,
